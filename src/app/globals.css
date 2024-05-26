@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .title {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+}
+
 /* Header */
 .animation-header {
   animation: init-header 0.25s linear forwards;
@@ -42,4 +48,22 @@
   100% {
     transform: translateX(0);
   }
+}
+
+/* Embla CSS */
+.embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  will-change: transform;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 20rem;
+  flex: 0 0 33.33%;
+  margin-right: 2rem;
 }
