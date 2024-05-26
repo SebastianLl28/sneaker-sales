@@ -1,3 +1,9 @@
+import HeaderLayout from "@/layouts/Header.layout";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <main>
+      <HeaderLayout />
+    </main>
+  );
 }
