@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { data } from "../header/data/data";
 
 interface NavigationProps {
   isHeaderOpen: boolean;
@@ -17,7 +18,7 @@ export default function NavigationMobile({
 
   return (
     <aside
-      className={`min-h-dvh w-full fixed inset-0 font-semibold text-2xl
+      className={`min-h-dvh w-full fixed inset-0 font-semibold text-2xl z-50
       ${isHeaderOpen ? "animation-header-bg md:hidden" : "hidden"}
       `}
     >
@@ -46,10 +47,14 @@ export default function NavigationMobile({
           </button>
         </header>
         <nav className="w-full mt-6">
-          <ul>
-            <li>
-              <Link href="/">Novedades destacados</Link>
-            </li>
+          <ul className="">
+            {data.map((item) => (
+              <li key={item.id}>
+                <Link href={item.url} className="leading-loose">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

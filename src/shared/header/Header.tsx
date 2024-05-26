@@ -2,6 +2,7 @@
 
 import Logo from "@/components/Logo";
 import Link from "next/link";
+import { data } from "./data/data";
 
 interface HeaderProps {
   setIsHeaderOpen: (value: boolean) => void;
@@ -21,24 +22,22 @@ export default function Header({
   };
 
   return (
-    <header className="w-full font-semibold">
+    <header className="w-full font-semibold z-10">
       <div className="container flex items-center justify-between py-4">
         <Link href="/">
           <Logo className="h-5 w-fit" />
         </Link>
         <nav className="hidden md:inline-block">
-          <ul>
-            <li>
-              <Link href="/">Novedades destacados</Link>
-            </li>
+          <ul className="flex gap-12">
+            {data.map((item) => (
+              <li key={item.id}>
+                <Link href={item.url}>{item.title}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className="flex items-center gap-4">
-          <button
-            type="button"
-            // className="md:hidden"
-            onClick={handleOpenSearch}
-          >
+          <button type="button" onClick={handleOpenSearch}>
             <svg
               aria-hidden="true"
               focusable="false"

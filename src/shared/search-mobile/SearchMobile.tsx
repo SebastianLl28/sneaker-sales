@@ -26,7 +26,7 @@ export default function SearchMobile({
 
   return (
     <div
-      className={`min-h-dvh w-full fixed inset-0
+      className={`min-h-dvh w-full fixed inset-0 z-50
     ${isSearchOpen ? "animation-header-bg" : "hidden"}
     `}
     >
