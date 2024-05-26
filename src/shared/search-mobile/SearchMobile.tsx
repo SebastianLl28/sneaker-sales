@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useId, useRef } from "react";
+
 interface SearchMobileProps {
   isSearchOpen: boolean;
   setIsSearchOpen: (value: boolean) => void;
@@ -12,6 +14,15 @@ export default function SearchMobile({
   const handleCancelSearch = () => {
     setIsSearchOpen(false);
   };
+
+  const inputSearch = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isSearchOpen && inputSearch.current) {
+      inputSearch.current.value = "";
+      inputSearch.current.focus();
+    }
+  }, [isSearchOpen]);
 
   return (
     <div
@@ -47,6 +58,11 @@ export default function SearchMobile({
               type="text"
               className="bg-[#f5f5f5] pl-11 pr-4 py-2 rounded-full w-full focus:bg-[#e5e5e5] placeholder:text-lg font-semibold outline-none"
               placeholder="Buscar"
+              inputMode="search"
+              autoComplete="off"
+              aria-label="Buscar Productos"
+              aria-required="true"
+              ref={inputSearch}
             />
           </div>
           <button className="font-semibold" onClick={handleCancelSearch}>
