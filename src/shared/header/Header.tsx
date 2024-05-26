@@ -22,7 +22,7 @@ export default function Header({
   };
 
   return (
-    <header className="w-full font-semibold z-10">
+    <header className="w-full font-semibold z-10 sticky top-0 bg-white">
       <div className="container flex items-center justify-between py-4">
         <Link href="/">
           <Logo className="h-5 w-fit" />
