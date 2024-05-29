@@ -64,8 +64,20 @@
 .embla__slide {
   position: relative;
   min-width: 0;
-  flex: 0 0 33.33%;
+  flex: 0 0 32.1%;
   margin-right: 2rem;
+}
+
+.embla__slide:last-child {
+  margin-right: 0;
+}
+
+.embla__button {
+  @apply p-2 bg-gray-200 rounded-full transition-colors hover:bg-gray-300 md:p-3;
+}
+
+.embla__button--disabled {
+  @apply opacity-30 hover:opacity-30 cursor-default hover:bg-gray-200;
 }
 
 @media screen and (max-width: 768px) {
