@@ -5,7 +5,7 @@ export const data = [
     image: "/home/sport/running.jpg",
     alt: "Running",
     link: "/",
-    height: 800,
+    height: 400,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const data = [
     image: "/home/sport/futbol.jpg",
     alt: "Fútbol",
     link: "/",
-    height: 800,
+    height: 400,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const data = [
     image: "/home/sport/baloncesto.jpg",
     alt: "Baloncesto",
     link: "/",
-    height: 800,
+    height: 400,
   },
   {
     id: 4,
@@ -29,6 +29,6 @@ export const data = [
     image: "/home/sport/tenis.jpg",
     alt: "Tenis",
     link: "/",
-    height: 800,
+    height: 400,
   },
 ];
