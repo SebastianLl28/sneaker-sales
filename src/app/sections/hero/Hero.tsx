@@ -1,5 +1,4 @@
 export default function Hero() {
-  // TODO: Eliminar el video mp4
   return (
     <section className="relative">
       <video
@@ -11,7 +10,7 @@ export default function Hero() {
         className="w-full object-cover min-h-[30rem] max-h-[70vh]"
       ></video>
       <div className="absolute inset-0 bg-black bg-opacity-60">
-        <div className="flex flex-col justify-end pb-6 pl-6 md:pl-6 md:pb-10 h-full text-white">
+        <div className="flex flex-col h-full justify-end pb-6 md:pb-12 container text-white">
           <h1 className="text-4xl md:text-6xl font-bold text-balance mb-4">
             Prepárate para el calor
           </h1>
